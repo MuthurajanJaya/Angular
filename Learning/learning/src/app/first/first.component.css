@@ -1,0 +1,73 @@
+.headerstyle {
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn {
+    height: 40px;
+    width: 80px;
+    background-color: #aa2aa5;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #aa2aa5;
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        padding: 10px;
+    }
+
+    .headbtn {
+        display: none;
+    }
+
+    div.menu_bar {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        top: 15px;
+
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 30px;
+        height: 4px;
+        background-color: black;
+        margin-top: 6px;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+}

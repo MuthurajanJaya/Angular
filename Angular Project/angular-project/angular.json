@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dependency-injection": {
+    "angular-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dependency-injection",
+            "outputPath": "dist/angular-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -57,15 +57,13 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dependency-injection:build:production"
+              "browserTarget": "angular-project:build:production"
             },
-            
             "development": {
-              "browserTarget": "dependency-injection:build:development"
+              "browserTarget": "angular-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dependency-injection:build"
+            "browserTarget": "angular-project:build"
           }
         },
         "test": {
@@ -83,7 +81,7 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
               "src/assets"

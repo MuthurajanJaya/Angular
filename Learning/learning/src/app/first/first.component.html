@@ -1,0 +1,28 @@
+<header class="headerstyle">
+    <img src={{logo}} alt="Aspire logo" style="height: 50px;width: 50px;margin-top: 10px;">
+    <h1>Aspire Mobiles</h1>
+    <div class="headbtn" style="position:relative;padding-left: 70%;margin-top: 10px;">
+        <button class="btn">Login</button>
+        <button class="btn">Signup</button>
+    </div>
+    <div class="menu_bar" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</header>
+
+<div class="grid-container">
+    <div *ngFor="let DATA of data" class="grid-item">
+        <p>{{DATA.name}}</p>
+        <img src={{DATA.image}} style="height: 200px; width: 180px;">
+        <button class="pricebtn">
+            <strong>{{DATA.price}}</strong>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<h2>
+  Angular Project
+</h2>
+<app-parent *ngIf="show" name="{{title}}"></app-parent>
+<button (click)="toggle()">toggle</button>
+<hr>
+<div class="app-button">
+  <button>app-button</button>
+</div>
+<hr>
+<app-child></app-child>
+<hr>
+<app-parent [fullname] = "names1"></app-parent>
